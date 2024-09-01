@@ -5,15 +5,19 @@
 // systemctl restart keyboard-setup
 
 // add to /usr/share/X11/xkb/rules/evdev.xml the following entry
-// layoutList -> variantList 
+// layoutList -> variantList (After "us" layout !)
 // <variant>
 //   <configItem>
-//     <name>Salgado</name>
+//     <name>salgado</name>
 //     <description>US with PT characters</description>
 //   </configItem>
 // </variant>
 
 // add this to /usr/share/X11/xkb/symbols/us
+
+// NOTE: on KDE, run "fcitx5-configtool". It lloks KDE use a "custom" config based on xkb
+// https://wiki.archlinux.org/title/Input_method
+
 
 partial alphanumeric_keys modifier_keys
 xkb_symbols "salgado" {
